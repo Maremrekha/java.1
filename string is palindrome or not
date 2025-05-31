@@ -1,0 +1,30 @@
+class Main {
+    public static void main(String[] args) {
+        String s="babad";
+        int n=s.length();
+        for(int l=0;l<n-1;l++){
+            for(int r=l;r<n;r++){
+              String ss=(s.substring(l,r+1));
+               int x=0;
+               int y=ss.length()-1;
+               boolean flag=true;
+               while(x<y){
+                   if(s.charAt(x)==s.charAt(y)){
+                       x++;
+                       y--;
+                   }
+                   else{
+                      flag=false; 
+                      break;
+                   }
+               }
+               if(flag==true){
+                   System.out.println(ss+ " Palindrome");
+               }
+               else{
+                   System.out.println(ss+ " not palindrome");
+               }
+            }
+        }
+    }
+}
